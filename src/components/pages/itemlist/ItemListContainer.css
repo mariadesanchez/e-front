@@ -1,0 +1,36 @@
+.imagen {
+    max-width: 100%;
+    /* Las imágenes no serán más anchas que su contenedor */
+    height: auto;
+    /* La altura se ajusta automáticamente para mantener la proporción original */
+    display: block;
+    /* Elimina el espacio adicional debajo de las imágenes */
+    margin: 0 auto;
+    /* Centra las imágenes horizontalmente */
+}
+
+
+/* Estilos para pantallas grandes */
+
+
+/* Estilos para pantallas medianas */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 6fr;
+    /* 2 columnas de igual ancho y luego una columna que ocupa 6 partes */
+    grid-template-rows: repeat(6, 1fr);
+    /* 6 filas de igual altura */
+    grid-gap: 10px;
+    /* Espaciado entre las celdas */
+    margin-top: 100px;
+}
+
+.column-derecha {
+    grid-column: 3 / span 6;
+    /* Ocupa 6 columnas a partir de la tercera */
+    grid-row: span 6;
+    /* Ocupa 6 filas */
+    /* background-color: #e74c3c; */
+    /* Color de fondo para la columna derecha */
+}
