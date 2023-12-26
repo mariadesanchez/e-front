@@ -76,7 +76,7 @@ const Checkout = () => {
     });
     try {
       let response = await axios.post(
-        "https://ebacks.vercel.app/create_preference",
+        "https://back-e-one.vercel.app/create_preference",
         {
           items: newArray,
           shipment_cost: shipmentCost,
