@@ -57,7 +57,7 @@ const Checkout = () => {
 
   useEffect(()=>{
     let shipmentCollection = collection(db, "shipment")
-    let shipmentDoc = doc(shipmentCollection, "HxMuNKLUglVoHjAyosML")
+    let shipmentDoc = doc(shipmentCollection, "8jLICZNG3Y8O9Y3YpOmp")
     getDoc(shipmentDoc).then(res => {
       setShipmentCost(res.data().cost)
     })
