@@ -7,6 +7,7 @@ import UserOrders from "../components/pages/userOrders/UserOrders";
 import Favs from "../components/pages/Favs/Favs";
 import Categoria from "../components/pages/categoria/Categoria";
 import Whatsapp from "../components/pages/Whatsapp";
+import Checkout from "../components/pages/checkout/Checkout";
 
 
 export const routes = [{
