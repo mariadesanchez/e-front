@@ -1,0 +1,50 @@
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #4CAF50;
+    border-radius: 4px;
+    color: #4CAF50;
+    background-color: #E6F7E9;
+}
+
+.success {
+    border-color: #45a049;
+    color: #45a049;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+
+/* Add any existing styles here */
+
+.alert.success {
+    text-align: center;
+}
+
+.alert.success h5,
+.alert.success h4 {
+    margin: 0;
+}
+
+.button {
+    display: block;
+    margin-top: 10px;
+    /* Adjust as needed */
+    text-align: center;
+}

@@ -1,3 +1,4 @@
+
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../../context/CartContext";
 import { initMercadoPago, Wallet } from "@mercadopago/sdk-react";
@@ -6,6 +7,8 @@ import { Button, TextField } from "@mui/material";
 import { AuthContext } from "../../../context/AuthContext";
 import { Link, useLocation } from "react-router-dom";
 import { db } from "../../../firebaseConfig";
+import './Checkout.css'; // Ruta relativa al archivo CSS
+
 import {
   addDoc,
   collection,
@@ -76,10 +79,9 @@ const Checkout = () => {
     });
     try {
       let response = await axios.post(
-        
-        "https://back-e-one.vercel.app/create_preference",
-        "https://back-e-one.vercel.app/create_preference",
-        // "http://localhost:8090/create_preference",
+          // "https://back-e-one.vercel.app/create_preference",
+        // "https://back-e-one.vercel.app/create_preference",
+        "http://localhost:8080/create_preference",
         {
           items: newArray,
           shipment_cost: shipmentCost,
@@ -129,11 +131,15 @@ const Checkout = () => {
       onChange={handleChange}
       />
       <Button onClick={handleBuy}>Seleccione metodo de pago</Button> 
-      </>: <>
-        <h4>El pago se realizo con exito!!!</h4>
-        <h4>Su numero de compra es {orderId}</h4>
-        <Link to="/shop">Seguir comprando</Link>
-      </>
+      </>:
+      <div className="alert success">
+      <h5>El pago se realizó con éxito!!!</h5>
+      <h4>Número de Orden: {orderId}</h4>
+      <Link to="/shop" className="button">
+        Seguir comprando
+      </Link>
+    </div>
+    
     }
 
       {preferenceId && (
