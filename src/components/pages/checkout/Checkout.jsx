@@ -7,7 +7,7 @@ import { Button, TextField } from "@mui/material";
 import { AuthContext } from "../../../context/AuthContext";
 import { Link, useLocation } from "react-router-dom";
 import { db } from "../../../firebaseConfig";
-import './Checkout.css'; // Ruta relativa al archivo CSS
+import './checkout.css'; // Ruta relativa al archivo CSS
 
 import {
   addDoc,
