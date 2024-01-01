@@ -79,9 +79,8 @@ const Checkout = () => {
     });
     try {
       let response = await axios.post(
-          // "https://back-e-one.vercel.app/create_preference",
-        // "https://back-e-one.vercel.app/create_preference",
-        "http://localhost:8080/create_preference",
+        "https://back-e-one.vercel.app/create_preference", 
+        // "http://localhost:8080/create_preference",
         {
           items: newArray,
           shipment_cost: shipmentCost,
